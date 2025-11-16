@@ -1,37 +1,107 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #7700ff1f;
-    font-family: Arial, sans-serif;
-    padding: 20px;
+  background-color: #7700ff1f;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    height: auto    ;
-    margin: 0 auto;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.inputContainer {
-    display: flex;
+.inputArea {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.inputArea input {
+  padding: 1em;
+  border-radius: 1em;
+  flex: 1;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 1em 1.2em;
+  border-radius: 1em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteTask {
+  background-color: red;
+  color: #fff;
+}
+
+#addButton {
+  background-color: blue;
+  color: #fff;
+}
+
+#completeTask {
+  background-color: green;
+  color: #fff;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+}
+
+/* Task list */
+#taskItems {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.items {
+  background-color: #d1d1d1;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 0.5em;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .inputArea {
     flex-direction: column;
+  }
+
+  #addButton {
     width: 100%;
-    max-width: 600px;
-    margin-bottom: 20px;
-}
+  }
 
-.inputContainer input {
-    padding: 2em;
-    border-radius: 10em;
+  .items {
+    gap: 10px;
+    text-align: center;
+  }
 }
